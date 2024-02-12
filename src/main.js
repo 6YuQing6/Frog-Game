@@ -1,8 +1,8 @@
 // Name: Sunny Han
 // Date: 02/02/2024
-// Hours:
-// Creative Tilt: Particles to simulate rain
-// Technical Tilt: Used a state machine for frog movement and animation
+// Hours: 25
+// Creative Tilt: Designed frog animations 
+// Technical Tilt: Used a state machine for frog movement and animation + added mini frog spawner
 
 'use strict';
 
