@@ -12,6 +12,7 @@ class Play extends Phaser.Scene{
         this.frogDestroyed = false
         score = 0
         this.tileScroll = 0.5
+        this.frogPop = true
     }
 
     create(){
@@ -167,7 +168,10 @@ class Play extends Phaser.Scene{
     }
 
     gameOver(){
-        this.pop.play()
+        if (this.frogPop){
+            this.pop.play()
+            this.frogPop = false
+        }
         this.frog.setVisible(false)
         this.add.rectangle(width/2,height/2 - height/10, 300, 300, 0x4b692f, 0.5).setOrigin(0.5,0.5)
         this.add.text(width/2,height/2 - 2 * height/10,'Game Over', menuConfig).setOrigin(0.5,0.5).setFontSize(40);

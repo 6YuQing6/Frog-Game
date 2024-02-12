@@ -19,7 +19,7 @@ class Leaf extends Phaser.Physics.Arcade.Sprite{
         this.newLeaf = true;
     }
     update(){
-        if (this.newLeaf && this.y > centerY && this.parent){
+        if (this.newLeaf && this.y > (centerY - Phaser.Math.Between(0,100)) && this.parent){
             this.parentScene.addLeaf(this.parent, this.velocity);
             this.newLeaf = false;
             //console.log('adding new leaf')
